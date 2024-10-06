@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/search_google_free/db" VERSION="20241005" COMMENT="XMLDB file for Moodle blocks/search_google_free"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_search_google_free_usage_count" COMMENT="Stores the number of queries each user made on a day">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="19" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="date" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="A numerical string in form YYYYMMDD, that is, Ymd in PHP DateTime format"/>
+        <FIELD NAME="count" TYPE="int" LENGTH="6" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Number of queries the user made on the given day"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="fk_user_id" TYPE="foreign-unique" FIELDS="id" REFTABLE="user" REFFIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

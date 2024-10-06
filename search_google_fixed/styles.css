@@ -1,0 +1,36 @@
+.block_search_google_fixed .json-response {
+    max-height: 30em;
+    overflow: scroll;
+}
+
+.block_search_google_fixed .result-list {
+    max-height: 30em;
+    overflow: scroll;
+}
+
+.block_search_google_fixed .result-list .result-item {
+    padding: 0.5em;
+    border-radius: .5em;
+}
+
+.block_search_google_fixed .result-list .result-item:hover {
+    background-color: #f5f5f5;
+}
+
+.block_search_google_fixed .result-list .result-url {
+    color: #005b0f;
+}
+
+.block_search_google_fixed .result-list .result-title {
+    color: #00055b;
+    font-weight: bold;
+    font-size: large;
+}
+
+.block_search_google_fixed .result-list .result-title:visited {
+    color: #3d005b;
+}
+
+.block_search_google_fixed .cache-string {
+    color: #d2831b;
+}

@@ -1,0 +1,46 @@
+.block_search_google_free .json-response {
+    max-height: 30em;
+    overflow: scroll;
+}
+
+.block_search_google_free .result-list {
+    max-height: 30em;
+    overflow: scroll;
+}
+
+.block_search_google_free .result-list .result-item {
+    padding: 0.5em;
+    border-radius: .5em;
+}
+
+.block_search_google_free .result-list .result-item:hover {
+    background-color: #f5f5f5;
+}
+
+.block_search_google_free .result-list .result-url {
+    color: #005b0f;
+}
+
+.block_search_google_free .result-list .result-title {
+    color: #00055b;
+    font-weight: bold;
+    font-size: large;
+}
+
+.block_search_google_free .result-list .result-title:visited {
+    color: #3d005b;
+}
+
+.block_search_google_free form .row {
+    align-items: center;
+}
+
+.block_search_google_free form label {
+    /* to undo the "word-break: break-word !important" in Moodle's
+    .word-break class */
+    word-break: normal !important;
+}
+
+.block_search_google_free .daily-limit {
+    color: #d2831b;
+}

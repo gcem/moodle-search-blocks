@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/search_google_fixed/db" VERSION="20241006" COMMENT="XMLDB file for Moodle blocks/search_google_fixed"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_search_google_fixed_cached_search" COMMENT="Stores the results of a search together with the time">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="SHA256 (not necessarily) hash of the search query"/>
+        <FIELD NAME="date" TYPE="int" LENGTH="19" NOTNULL="true" SEQUENCE="false" COMMENT="A number representing search date and time in form YYYYMMDDHHMM, that is, YmdHi in PHP DateTime format"/>
+        <FIELD NAME="result" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="JSON string representing the search results from the search API"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="index_date" UNIQUE="false" FIELDS="date"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>

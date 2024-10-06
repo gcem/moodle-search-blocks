@@ -1,0 +1,12 @@
+{{! TODO CEM boilerplate }}
+<h3>{{#str}} searchresultsfor, block_search_google_fixed, {{query}} {{/str}}</h3>
+<p class="cache-string">{{cache_string}}</p>
+<ul class="result-list unlist">
+    {{#items}}
+    <li class="result-item">
+        <div><a href="{{link}}" class="result-url">{{{htmlFormattedUrl}}}</a></div>
+        <div><a href="{{link}}" class="result-title">{{{htmlTitle}}}</a></div>
+        <p>{{{htmlSnippet}}}</p>
+    </li>
+    {{/items}}
+</ul>
